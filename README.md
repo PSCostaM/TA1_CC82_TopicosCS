@@ -43,7 +43,7 @@ Para un conjunto de “n” hombres y “n” mujeres, es necesario definir una 
 <p align="justify">
 <ul>
 <li><b>Restricción de Biyectividad</b>: Asegurar que cada hombre esté casado con una mujer diferente. Esto puede ser impuesto por una restricción global como “All Different” sobre las variables $M_1, M_2, …, M_n$.</li>
-<li><b>Restricción de Estabilidad</b>b>: No deben existir dos parejas $(m, w)$ y $(m’, w’)$  tales que m prefiera a $w’$ sobre $w$ y $w’$ prefiera a $m$ sobre $m'$. Esta restricción puede ser un poco más compleja de implementar y a menudo requiere iterar pares de hombres y a menudo requiere iterar sobre pares de hombres y mujeres correspondientes, comparando sus preferencias.
+<li><b>Restricción de Estabilidad</b>: No deben existir dos parejas $(m, w)$ y $(m’, w’)$  tales que m prefiera a $w’$ sobre $w$ y $w’$ prefiera a $m$ sobre $m'$. Esta restricción puede ser un poco más compleja de implementar y a menudo requiere iterar pares de hombres y a menudo requiere iterar sobre pares de hombres y mujeres correspondientes, comparando sus preferencias.
  </li>
  </ul>
 </p>

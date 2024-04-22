@@ -57,7 +57,7 @@ Para las restricciones de estabilidad, para cada par de hombres m y m’, y cada
 <li>Si $P_m,w’$ < $P_m,w$ (es decir, $m$ prefiere a $w’$ sobre $w$), debe ser que $P_w’,m > P_w’,m’$ (es decir, $w’$ prefiere a $m’$ sobre $m$)</li>
 </ul>
  </ul>
-Resolver el problema
+<h4>Resolver el problema</h4>
 Debido al contexto del curso y lo aprendido en clase consideramos como OR-Tools de Google que puede manejar restricciones de manera eficiente. 
 </p>
 

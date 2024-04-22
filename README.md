@@ -26,7 +26,7 @@ El presente trabajo consiste en agrupar una pareja entre 2 grupos de 6 hombres y
 <p align="center">
   <img width="600" src="https://github.com/PSCostaM/TA1_CC82_TopicosCS/assets/48858434/dcadf064-99d3-425d-b632-e5ab98e7e144">
 </p>
-<p alig="center">Tabla de preferencias</p>
+<p align="center">Tabla de preferencias</p>
 
 ### Motivación
 

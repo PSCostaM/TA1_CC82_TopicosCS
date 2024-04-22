@@ -115,11 +115,15 @@ Procedimiento matrimonio_estable(preferencias_hombres, preferencias_mujeres):
 <p align="justify">
 Para el desarrollo del trabajo será fundamental el uso de las bibliotecas Or-Tools y Graphviz.
 </p>
+
 #### Or-Tools
+
 <p align="justify">
 Es una biblioteca de optimización combinatoria que nos permite utilizar herramientas para resolver problemas de optimización, incluido el problema de satisfacción de restricciones (CSP). Por ello, su uso será relevante para encontrar una solución óptima al momento de relacionar las parejas y encontrar un matrimonio estable.
  </p>
+ 
 #### Graphivz
+
  <p align="justify">
 Con esta biblioteca implementaremos grafos para conocer de manera gráfica las relaciones de las parejas. Nuestra solución será plasmada mediante estas estructuras para visualizar los matrimonios encontrados.
 </p>

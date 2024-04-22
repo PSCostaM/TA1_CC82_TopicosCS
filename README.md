@@ -1,7 +1,7 @@
 # TA1_CC82_TopicosCS
 
 <p align="center">
- <h2>Universidad Peruana de Ciencias Aplicadas</h2>
+ <h2 align="center">Universidad Peruana de Ciencias Aplicadas</h2>
  </p>
  ## Tópicos en Ciencias de la Computación - CC58
  

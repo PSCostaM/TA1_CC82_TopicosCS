@@ -1,5 +1,5 @@
 # TA1_CC82_TopicosCS
-
+<p align="center">
 ## Universidad Peruana de Ciencias Aplicadas
 
 ## Tópicos en Ciencias de la Computación - CC58
@@ -16,3 +16,4 @@
  . Caballero Lara, Eduardo Roman (U202019644)
 
 ### CICLO 2024-1
+</p>

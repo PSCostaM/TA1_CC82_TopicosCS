@@ -19,6 +19,7 @@
 
 
 ## Introducción
+### Problema
 <p align="justify">
 El presente trabajo consiste en agrupar una pareja entre 2 grupos de 6 hombres y mujeres. A esta agrupación se le dará el nombre de matrimonio, para lo cual se deberá tener 6 parejas conformadas por un hombre y una mujer. No obstante, se nos da un criterio de condición, el cual es la inestabilidad entre las parejas por preferir a otro hombre o mujer.
  </p>
@@ -26,5 +27,14 @@ El presente trabajo consiste en agrupar una pareja entre 2 grupos de 6 hombres y
 <img width="600" src="https://github.com/PSCostaM/TA1_CC82_TopicosCS/assets/48858434/dcadf064-99d3-425d-b632-e5ab98e7e144">
 </p>
 
+### Motivación
 
-##
+<p align="justify">
+ Para este trabajo tenemos la motivación de desarrollar un sistema para agrupar a los hombres y mujeres respetando el criterio de condición dado, el cual es que una pareja deberá estar casada como máximo con la cuarta persona de su preferencia. Ello con el fin de encontrar un matrimonio estable y duradero en este caso.
+</p>
+
+### Técnica propuesta
+
+<p>
+ $\sqrt{3x-1}+(1+x)^2$
+</p>

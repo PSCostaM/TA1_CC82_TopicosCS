@@ -9,9 +9,9 @@
 <h3 align="center"> Profesor: Luis Martín Canaval Sanchez</h3>
 <h3 align="center"> Alumnos</h3>
  <ul>
-  <item>Camargo Ramírez, Enzo Fabricio (U202010122)</item>
-  <item>Costa Mondragón, Paulo Sergio (U201912086)</item>
-  <item>Caballero Lara, Eduardo Roman (U202019644)</item>
+  <li>Camargo Ramírez, Enzo Fabricio (U202010122)</li>
+  <li>Costa Mondragón, Paulo Sergio (U201912086)</li>
+  <li>Caballero Lara, Eduardo Roman (U202019644)</li>
  </ul>
  
  

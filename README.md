@@ -52,9 +52,9 @@ Para un conjunto de “n” hombres y “n” mujeres, es necesario definir una 
 <p>
 Para las restricciones de estabilidad, para cada par de hombres m y m’, y cada par de mujeres w y w’, añadimos restricciones tales que:
  <ul>
-<li>Si $M_m = w y M_m’ = w’$, entonces:</li>
+<li>Si $M_m = w$ y $M_m’ = w’$, entonces:</li>
 <ul>
-<li>Si $P_m,w’$ < $P_m,w$ (es decir,$m$ prefiere a $w’$ sobre $w$), debe ser que $P_w’,m > P_w’,m’$ (es decir, $w’$ prefiere a $m’$ sobre $m$)</li>
+<li>Si $P_m,w’$ < $P_m,w$ (es decir, $m$ prefiere a $w’$ sobre $w$), debe ser que $P_w’,m > P_w’,m’$ (es decir, $w’$ prefiere a $m’$ sobre $m$)</li>
 </ul>
  </ul>
 Resolver el problema

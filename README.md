@@ -42,8 +42,22 @@ Para un conjunto de “n” hombres y “n” mujeres, es necesario definir una 
 #### Establecer las restricciones
 <p align="justify">
 <ul>
-<li><b>Restricción de Biyectividad</b>: Asegurar que cada hombre esté casado con una mujer diferente. Esto puede ser impuesto por una restricción global como “All Different” sobre las variables $M_1, M_2, …, M_n$.</li>
+<li><b>Restricción de Biyectividad</b>: Asegurar que cada hombre esté casado con una mujer diferente. Esto puede ser impuesto por una restricción global como “AllDifferent” sobre las variables $M_1, M_2, …, M_n$.</li>
 <li><b>Restricción de Estabilidad</b>: No deben existir dos parejas $(m, w)$ y $(m’, w’)$  tales que m prefiera a $w’$ sobre $w$ y $w’$ prefiera a $m$ sobre $m'$. Esta restricción puede ser un poco más compleja de implementar y a menudo requiere iterar pares de hombres y a menudo requiere iterar sobre pares de hombres y mujeres correspondientes, comparando sus preferencias.
  </li>
  </ul>
 </p>
+
+#### Implementar las Restricciones de Estabilidad
+<p>
+Para las restricciones de estabilidad, para cada par de hombres m y m’, y cada par de mujeres w y w’, añadimos restricciones tales que:
+ <ul>
+<li>Si $M_m = w y M_m’ = w’$, entonces:</li>
+<ul>
+<li>Si $P_m,w’$ < $P_m,w$ (es decir,$m$ prefiere a $w’$ sobre $w$), debe ser que $P_w’,m > P_w’,m’$ (es decir, $w’$ prefiere a $m’$ sobre $m$)</li>
+</ul>
+ </ul>
+Resolver el problema
+Debido al contexto del curso y lo aprendido en clase consideramos como OR-Tools de Google que puede manejar restricciones de manera eficiente. 
+</p>
+

@@ -35,6 +35,6 @@ El presente trabajo consiste en agrupar una pareja entre 2 grupos de 6 hombres y
 
 ### Técnica propuesta
 
-<p>
- $\sqrt{3x-1}+(1+x)^2$
+<p align="justifiy">
+Para un conjunto de “n” hombres y “n” mujeres, es necesario definir una variable para cada hombre m. La variable para el hombre “m”, denota cómo Mm tomará un valor del conjunto {1,2,...,n}, representando a las mujeres. Así, $\M_m = i$ indica que el hombre m está casado con la mujer i.
 </p>

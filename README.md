@@ -62,7 +62,7 @@ Para las restricciones de estabilidad, para cada par de hombres m y m’, y cada
 Debido al contexto del curso y lo aprendido en clase consideramos como OR-Tools de Google que puede manejar restricciones de manera eficiente. 
 </p>
 
-#### Objetivos
+### Objetivos
 <p align="justify">
  <ul>
 <li>Encontrar un “matrimonio estable” y que cada pareja se encuentre agrupada.</li>
@@ -70,4 +70,58 @@ Debido al contexto del curso y lo aprendido en clase consideramos como OR-Tools 
 <li>Implementar una solución a las condiciones mediante un CSP (Problema de Satisfacción de Restricciones).</li>  
  </ul>
 </p>
+
+### Marco teórico
+
+<p align="justify">
+ El Algoritmo de Gale-Shapley, conocido por resolver el problema de emparejamiento estable, que proponen a sus candidatos preferidos, mientras que el otro conjunto acepta o rechaza estas propuestas según sus propias preferencias. La iteración continúa hasta que se logra un conjunto de emparejamientos donde nadie tiene incentivos para romper la pareja actual por otra preferida. Una de las cualidades distintivas de este algoritmo es su capacidad para siempre llegar a una solución estable, favoreciendo al grupo que hace las propuestas, y por lo tanto asegurando el mejor escenario posible para dicho grupo bajo la condición de estabilidad.
+</p>
+
+#### Pseudocódigo
+```
+Inicializar todos los m y w como solteros
+mientras exista un hombre m que sea soltero y no haya propuesto a todas las mujeres:
+    seleccionar tal hombre m
+    w = primera mujer en la lista de preferencias de m a la que m aún no ha propuesto
+    si w es soltera:
+        (m, w) se comprometen
+    sino si w prefiere m sobre su actual pareja m':
+        w rompe el compromiso con m'
+        (m, w) se comprometen
+    sino:
+        w rechaza a m
+retornar el conjunto de parejas comprometidas
+```
+<p align="justify">
+El Problema de Satisfacción de Restricciones (CSP) permite tratar con problemas donde se debe encontrar una asignación de valores a un conjunto de variables que satisfaga un conjunto de restricciones. 
+</p>
+
+#### Pseudocódigo
+```
+Procedimiento matrimonio_estable(preferencias_hombres, preferencias_mujeres):
+    Inicializar modelo CSP
+    Para cada mujer en preferencias_mujeres:
+        Crear una variable CSP(elección del candidato) para la mujer con dominio igual al conjunto de todos los hombres
+    Asegurar que todas las mujeres estén comprometidas con hombres diferentes usando una restricción AllDifferent
+    Para cada mujer en preferencias_mujeres:
+        Restringir las elecciones de la mujer a sus 4 principales preferencias de hombres
+    Resolver el modelo CSP
+    Si se encuentra una solución:
+        Imprimir las parejas establecidas
+    Sino:
+        Imprimir que no se encontró una solución estable
+```
+### Planteamiento
+<p align="justify">
+Para el desarrollo del trabajo será fundamental el uso de las bibliotecas Or-Tools y Graphviz.
+</p>
+#### Or-Tools
+<p align="justify">
+Es una biblioteca de optimización combinatoria que nos permite utilizar herramientas para resolver problemas de optimización, incluido el problema de satisfacción de restricciones (CSP). Por ello, su uso será relevante para encontrar una solución óptima al momento de relacionar las parejas y encontrar un matrimonio estable.
+ </p>
+#### Graphivz
+ <p align="justify">
+Con esta biblioteca implementaremos grafos para conocer de manera gráfica las relaciones de las parejas. Nuestra solución será plasmada mediante estas estructuras para visualizar los matrimonios encontrados.
+</p>
+
 

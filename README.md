@@ -62,3 +62,12 @@ Para las restricciones de estabilidad, para cada par de hombres m y m’, y cada
 Debido al contexto del curso y lo aprendido en clase consideramos como OR-Tools de Google que puede manejar restricciones de manera eficiente. 
 </p>
 
+#### Objetivos
+<p align="justify">
+ <ul>
+<li>Encontrar un “matrimonio estable” y que cada pareja se encuentre agrupada.</li>
+<li>Cumplir con la condición de preferencia, es decir, relacionar las parejas evitando agruparlas con personas de quinta o sexta preferencia.</li>
+<li>Implementar una solución a las condiciones mediante un CSP (Problema de Satisfacción de Restricciones).</li>  
+ </ul>
+</p>
+

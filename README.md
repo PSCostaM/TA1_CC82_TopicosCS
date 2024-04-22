@@ -15,5 +15,4 @@
  </ul>
  
  
- ### CICLO 2024-1
-
+ <h3 align="center">CICLO 2024-1</h3>

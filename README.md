@@ -38,3 +38,12 @@ El presente trabajo consiste en agrupar una pareja entre 2 grupos de 6 hombres y
 <p align="justifiy">
 Para un conjunto de “n” hombres y “n” mujeres, es necesario definir una variable para cada hombre $m$. La variable para el hombre “m”, denota cómo $M_m$ tomará un valor del conjunto $[1,2,...,n]$, representando a las mujeres. Así, $M_m = i$ indica que el hombre $m$ está casado con la mujer $i$.
 </p>
+
+#### Establecer las restricciones
+<p align="justify">
+<ul>
+<li>Restricción de Biyectividad: Asegurar que cada hombre esté casado con una mujer diferente. Esto puede ser impuesto por una restricción global como “All Different” sobre las variables #M_1, M_2, …, M_n$.</li>
+<li>Restricción de Estabilidad: No deben existir dos parejas $(m, w)$ y $(m’, w’)$  tales que m prefiera a $w^’$ sobre $w$ y $w^’$ prefiera a $m$ sobre $m^'$. Esta restricción puede ser un poco más compleja de implementar y a menudo requiere iterar pares de hombres y a menudo requiere iterar sobre pares de hombres y mujeres correspondientes, comparando sus preferencias.
+ </li>
+ </ul>
+</p>

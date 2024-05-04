@@ -128,4 +128,94 @@ Es una biblioteca de optimización combinatoria que nos permite utilizar herrami
 Con esta biblioteca implementaremos grafos para conocer de manera gráfica las relaciones de las parejas. Nuestra solución será plasmada mediante estas estructuras para visualizar los matrimonios encontrados.
 </p>
 
+### Desarrollo 
+<p align="justify">
+Marriage Problem fue desarrollado con OR-Tools. A continuación el código utilizado para la solución de este:
+ 
+```python
+
+from ortools.sat.python import cp_model
+import graphviz
+
+# Men and Women identifiers
+men = ['Richard', 'James', 'John', 'Bill', 'Greg', 'Mario']
+women = ['Helen', 'Tracy', 'Linda', 'Sally', 'Wanda', 'Mary']
+
+# Preferences
+# Men's preferences
+men_preferences = {
+    'Richard': [3, 5, 4, 2, 1, 6],
+    'James': [3, 2, 5, 6, 4, 1],
+    'John': [2, 4, 3, 1, 5, 6],
+    'Bill': [5, 6, 4, 2, 3, 1],
+    'Greg': [2, 5, 3, 6, 4, 1],
+    'Mario': [1, 3, 4, 5, 6, 2]
+}
+
+# Women's preferences
+women_preferences = {
+    'Helen': [2, 4, 5, 3, 6, 1],
+    'Tracy': [3, 5, 4, 2, 1, 6],
+    'Linda': [1, 3, 6, 2, 4, 5],
+    'Sally': [3, 2, 5, 6, 4, 1],
+    'Wanda': [6, 4, 2, 1, 3, 5],
+    'Mary': [6, 4, 3, 1, 5, 2]
+}
+
+# Model
+model = cp_model.CpModel()
+
+# Variables: man_to_woman[man][woman] is 1 if man is paired with woman
+man_to_woman = {}
+for man in men:
+    man_to_woman[man] = {}
+    for woman in women:
+        man_to_woman[man][woman] = model.NewBoolVar(f'{man}_{woman}')
+
+# Each man is paired with exactly one woman
+for man in men:
+    model.Add(sum(man_to_woman[man][woman] for woman in women) == 1)
+
+# Each woman is paired with exactly one man
+for woman in women:
+    model.Add(sum(man_to_woman[man][woman] for man in men) == 1)
+
+# Stability constraint: prevent instability in any pairing
+for m1 in men:
+    for w1 in women:
+        for m2 in men:
+            for w2 in women:
+                if m1 != m2 and w1 != w2:
+                    condition1 = men_preferences[m1][women.index(w2)] < men_preferences[m1][women.index(w1)]
+                    condition2 = women_preferences[w2][men.index(m1)] < women_preferences[w2][men.index(m2)]
+                    model.AddBoolOr([man_to_woman[m1][w1].Not(), man_to_woman[m2][w2].Not(), man_to_woman[m1][w2].Not(), man_to_woman[m2][w1].Not()])
+
+# Solve the model
+solver = cp_model.CpSolver()
+status = solver.Solve(model)
+
+# Graphviz setup
+dot = graphviz.Digraph(comment='Stable Marriage Problem')
+
+# Output results and build graph
+if status == cp_model.OPTIMAL:
+    for man in men:
+        dot.node(man, man, color='lightblue2', style='filled')
+    for woman in women:
+        dot.node(woman, woman, color='lightpink1', style='filled')
+    
+    for man in men:
+        for woman in women:
+            if solver.Value(man_to_woman[man][woman]) == 1:
+                print(f'{man} is married to {woman}')
+                dot.edge(man, woman, color='red')
+else:
+    print("No stable marriage configuration found.")
+
+# Render and view the graph
+dot.render('stable_marriage_output', view=True, format='png')
+
+```
+
+</p>
 

@@ -218,9 +218,11 @@ dot.render('stable_marriage_output', view=True, format='png')
 ```
 
 </p>
+<p align="center">
+  <img width="600" src="https://github.com/PSCostaM/TA1_CC82_TopicosCS/assets/48858434/debd15c9-325c-4084-85be-b03704cceba7">
+</p>
+<p align="center">Image showing the mariages that were created thanks to the code provided</p>
 
-![image](https://github.com/PSCostaM/TA1_CC82_TopicosCS/assets/48858434/debd15c9-325c-4084-85be-b03704cceba7)
-Image showing the mariages that were created thanks to the code provided
 
 ### Conclusiones
 <p align="justify">

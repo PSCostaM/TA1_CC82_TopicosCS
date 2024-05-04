@@ -219,3 +219,34 @@ dot.render('stable_marriage_output', view=True, format='png')
 
 </p>
 
+![image](https://github.com/PSCostaM/TA1_CC82_TopicosCS/assets/48858434/debd15c9-325c-4084-85be-b03704cceba7)
+Image showing the mariages that were created thanks to the code provided
+
+### Conclusiones
+<p align="center">
+Stable Marriage Problem (SMP) abordado mediante Google OR-Tools y visualizado con Graphviz proporciona una demostración sólida de cómo aplicar la programación por restricciones para resolver un problema combinatorio complejo. Aquí están las conclusiones clave de este trabajo:
+
+#### 1. Efectividad de la Programación por Restricciones:
+La programación por restricciones (CP) es muy efectiva para resolver problemas que se pueden modelar con variables, restricciones y, potencialmente, una función objetiva. El enfoque de CP en OR-Tools manejó eficientemente el SMP, que implica asegurar que cada participante esté emparejado bajo condiciones estrictas que previenen la inestabilidad.
+
+#### 2. Complejidad y Escalabilidad:
+El modelo manejó un escenario con seis hombres y seis mujeres, mostrando cómo CP puede gestionar conjuntos de datos de tamaño pequeño a moderado. Sin embargo, la escalabilidad a conjuntos de datos mucho más grandes debe considerarse, ya que la complejidad de agregar restricciones de estabilidad crece cuadráticamente con el número de participantes.
+
+#### 3. Beneficios de la Visualización:
+Usar Graphviz para visualizar los resultados proporcionó una comprensión clara e inmediata de los emparejamientos estables. Esta representación gráfica es invaluable, especialmente cuando se presentan los resultados a una audiencia que no está familiarizada con los detalles computacionales del problema.
+
+#### 4. Verificación de Estabilidad:
+Las restricciones añadidas al modelo aseguraron que no existiera inestabilidad dentro de los matrimonios, adhiriéndose estrictamente a la definición de estabilidad en el SMP. Este enfoque garantiza que todas las soluciones sean estables, pero no considera preferencias más allá de prevenir la inestabilidad, como optimizar la satisfacción general.
+
+#### 5. Implicaciones Prácticas:
+Aunque este modelo sirve como un buen ejercicio teórico y una demostración de las capacidades de CP, las aplicaciones del mundo real podrían requerir ajustes. Por ejemplo, los escenarios reales podrían introducir preferencias más dinámicas o la necesidad de manejar casos donde los participantes puedan optar por no emparejarse si no se encuentra un match adecuado.
+
+#### 6. Limitaciones y Trabajo Futuro:
+Optimización: Los modelos futuros podrían incluir objetivos de optimización, como maximizar la satisfacción general de las preferencias.
+Preferencias Dinámicas: Manejar preferencias cambiantes a lo largo del tiempo podría hacer el modelo más realista y adaptable.
+Conjuntos de Datos Más Grandes: Sería necesario probar y optimizar el modelo para grupos más grandes para entender sus limitaciones y mejorar la eficiencia.
+#### 7. Valor Educativo:
+Esta implementación es una excelente herramienta educativa para comprender tanto el problema del matrimonio estable como la aplicación de la programación por restricciones. Proporciona un marco práctico que puede extenderse o simplificarse según las necesidades educativas.
+
+En conclusión, la aplicación de Google OR-Tools y Graphviz al problema del matrimonio estable destaca el poder de las herramientas computacionales modernas para resolver problemas clásicos de maneras innovadoras y eficientes. Este proyecto no solo resalta la practicidad de la programación por restricciones en la solución de problemas de asignación y emparejamiento, sino que también demuestra cómo estas soluciones pueden hacerse accesibles y comprensibles mediante una visualización efectiva.
+</p>

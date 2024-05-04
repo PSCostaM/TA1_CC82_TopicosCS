@@ -223,7 +223,7 @@ dot.render('stable_marriage_output', view=True, format='png')
 Image showing the mariages that were created thanks to the code provided
 
 ### Conclusiones
-<p align="center">
+<p align="justify">
 Stable Marriage Problem (SMP) abordado mediante Google OR-Tools y visualizado con Graphviz proporciona una demostración sólida de cómo aplicar la programación por restricciones para resolver un problema combinatorio complejo. Aquí están las conclusiones clave de este trabajo:
 
 #### 1. Efectividad de la Programación por Restricciones:
